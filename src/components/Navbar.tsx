@@ -8,11 +8,11 @@ const Navbar: React.FC = () => {
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
   const navItems = [
-    { name: 'Team', path: '/' },
-    { name: 'Impact', path: '/impact' },
-    { name: 'Alliances', path: '/alliances' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Equipo', path: '/' },
+    { name: 'Impacto', path: '/impact' },
+    { name: 'Alianzas', path: '/alliances' },
+    { name: 'Recursos', path: '/resources' },
+    { name: 'Contacto', path: '/contact' }
   ]
 
   const handleMouseEnter = (itemName: string) => {
@@ -115,14 +115,7 @@ const Navbar: React.FC = () => {
               backdropFilter: 'blur(8px)',
               borderRadius: '9999px',
               transition: 'all 0.3s ease',
-              '@media (max-width: 767px)': {
-                overflowX: 'auto',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                '&::-webkit-scrollbar': {
-                  display: 'none'
-                }
-              }
+     
             }}>
               {navItems.map((item, index) => (
                 <Link
