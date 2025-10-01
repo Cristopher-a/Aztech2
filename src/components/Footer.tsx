@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react'
+import { Instagram, Mail, Phone } from 'lucide-react'
 
 const Footer: React.FC = () => {
   const [hoveredSocial, setHoveredSocial] = useState<string | null>(null)
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
               gap: '0.75rem'
             }}>
               <a
-                href="#"
+                href="https://www.instagram.com/aztech_2_17626?igsh=eDBwaGxvemFhNjlq"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -116,128 +116,14 @@ const Footer: React.FC = () => {
               >
                 <Instagram size={18} />
               </a>
-              <a
-                href="#"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '36px',
-                  height: '36px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  borderRadius: '50%',
-                  color: 'white',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  ...(hoveredSocial === 'facebook' ? {
-                    backgroundColor: '#1877f2',
-                    transform: 'translateY(-3px)'
-                  } : {})
-                }}
-                aria-label="Facebook"
-                onMouseEnter={() => handleMouseEnter('facebook')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="#"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '36px',
-                  height: '36px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  borderRadius: '50%',
-                  color: 'white',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  ...(hoveredSocial === 'youtube' ? {
-                    backgroundColor: '#ff0000',
-                    transform: 'translateY(-3px)'
-                  } : {})
-                }}
-                aria-label="YouTube"
-                onMouseEnter={() => handleMouseEnter('youtube')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Youtube size={18} />
-              </a>
-              <a
-                href="#"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '36px',
-                  height: '36px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  borderRadius: '50%',
-                  color: 'white',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  ...(hoveredSocial === 'tiktok' ? {
-                    backgroundColor: '#000000',
-                    transform: 'translateY(-3px)'
-                  } : {})
-                }}
-                aria-label="TikTok"
-                onMouseEnter={() => handleMouseEnter('tiktok')}
-                onMouseLeave={handleMouseLeave}
-              >
-                <svg style={{ width: '18px', height: '18px' }} fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-              </a>
+             
+    
+            
             </div>
           </div>
           
           {/* Columna 2: Enlaces rápidos */}
-          <div>
-            <h3 style={{
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              marginBottom: '1rem',
-              position: 'relative',
-              paddingBottom: '0.5rem'
-            }}>
-              Enlaces Rápidos
-              <span style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                width: '30px',
-                height: '2px',
-                background: 'linear-gradient(90deg, #3b82f6, #0ea5e9)'
-              }}></span>
-            </h3>
-            <ul style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0
-            }}>
-              {['Inicio', 'Servicios', 'Proyectos', 'Nosotros', 'Blog', 'Contacto'].map((item) => (
-                <li key={item} style={{ marginBottom: '0.5rem' }}>
-                  <a 
-                    href="#" 
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.7)',
-                      textDecoration: 'none',
-                      fontSize: '0.95rem',
-                      transition: 'color 0.3s ease',
-                      display: 'flex',
-                      alignItems: 'center'
-                    }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = '#3b82f6'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
-                  >
-                    <span style={{ marginRight: '0.5rem' }}>›</span> {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        
           
           {/* Columna 3: Contacto */}
           <div>
@@ -263,22 +149,17 @@ const Footer: React.FC = () => {
               padding: 0,
               margin: 0
             }}>
-              <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
-                <MapPin size={18} style={{ marginRight: '0.75rem', color: '#3b82f6', marginTop: '0.2rem' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem' }}>
-                  Av. Innovación 1234, Tech City, CP 54321
-                </span>
-              </li>
+             
               <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                 <Phone size={18} style={{ marginRight: '0.75rem', color: '#3b82f6' }} />
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem' }}>
-                  +1 (555) 123-4567
+                  +52 56 2722 4553
                 </span>
               </li>
               <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                 <Mail size={18} style={{ marginRight: '0.75rem', color: '#3b82f6' }} />
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem' }}>
-                  contacto@aztechii.com
+                  17626.aztech2@gmail.com
                 </span>
               </li>
             </ul>

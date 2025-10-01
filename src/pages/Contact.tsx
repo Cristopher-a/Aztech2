@@ -1,17 +1,39 @@
 import React, { useState, useEffect } from 'react'
 import { Mail, MessageCircle, Send, MapPin } from 'lucide-react'
-
+import emailjs from '@emailjs/browser';
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+
   const [focusedField, setFocusedField] = useState<string | null>(null)
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
   const [hoveredButton, setHoveredButton] = useState<string | null>(null)
   const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, size: number, speed: number}>>([])
 
+  const [Name, setName ]= useState("")
+  const [Message, setMessage ]= useState("")
+  const [Email, setEmail]=useState("")
+   const sendEmail = (e:any) => {
+    e.preventDefault(); // Evita el comportamiento por defecto del formulario
+
+    emailjs.send(
+      'service_qf5wwod',      // ID de su servicio de EmailJS
+      'template_6k3srct',     // ID de su plantilla de EmailJS
+      {
+title: "Queremos colaborar",
+name: Name,
+time: new Date(),
+message: Message,
+email: "ssss",
+},// Referencia al formulario
+      '2WcytQmofcRLC_Mwq'      // Su clave pública de EmailJS
+    )
+    .then((result) => {
+      console.log('Success:', result.text);
+      alert('Email sent successfully!');
+    }, (error) => {
+      console.error('Error:', error.text);
+      alert('Failed to send email.');
+    });
+  };
   // Generar partículas aleatorias
   useEffect(() => {
     const generateParticles = () => {
@@ -31,20 +53,7 @@ const Contact: React.FC = () => {
     generateParticles()
   }, [])
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log('Formulario enviado:', formData)
-    // Reset form
-    setFormData({ name: '', email: '', message: '' })
-  }
 
   return (
     <div style={{
@@ -188,7 +197,7 @@ const Contact: React.FC = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} style={{
+              <form onSubmit={sendEmail} style={{
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '1.5rem'
@@ -207,8 +216,8 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={Name}
+                     onChange={(e) => setName(e.target.value)}
                     required
                     style={{
                       width: '100%',
@@ -245,8 +254,8 @@ const Contact: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={Email}
+                     onChange={(e) => setEmail(e.target.value)}
                     required
                     style={{
                       width: '100%',
@@ -282,8 +291,8 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    value={Message}
+                     onChange={(e) => setMessage(e.target.value)}
                     required
                     rows={6}
                     style={{
@@ -390,7 +399,7 @@ const Contact: React.FC = () => {
                         fontSize: '1rem'
                       }}>Correo oficial</p>
                       <a 
-                        href="mailto:contacto@aztechii.com" 
+                        href="mailto:17626.aztech2@gmail.com" 
                         style={{
                           color: 'rgba(255, 255, 255, 0.9)',
                           textDecoration: 'none',
@@ -403,7 +412,8 @@ const Contact: React.FC = () => {
                         onMouseEnter={() => setHoveredLink('email')}
                         onMouseLeave={() => setHoveredLink(null)}
                       >
-                        contacto@aztechii.com
+                        17626.aztech2@gmail.com
+
                       </a>
                     </div>
                   </div>
@@ -449,7 +459,7 @@ const Contact: React.FC = () => {
                         onMouseEnter={() => setHoveredLink('whatsapp')}
                         onMouseLeave={() => setHoveredLink(null)}
                       >
-                        +52 123 456 7890
+                        +52 56 2722 4553
                       </a>
                     </div>
                   </div>
@@ -509,6 +519,9 @@ const Contact: React.FC = () => {
                   }}
                   onMouseEnter={() => setHoveredButton('whatsapp')}
                   onMouseLeave={() => setHoveredButton(null)}
+                  onClick={()=>{
+                        window.open("https://wa.me/525627224553")
+                  }}    
                 >
                   <MessageCircle size={20} />
                   <span>Escribir por WhatsApp</span>
