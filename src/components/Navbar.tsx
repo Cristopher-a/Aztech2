@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const location = useLocation()
   const [isHovered, setIsHovered] = useState<string | null>(null)
   const menuRef = useRef<HTMLDivElement>(null)
-  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([])
+  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const navItems = [
     { name: 'Equipo', path: '/' },
@@ -120,7 +120,9 @@ const Navbar: React.FC = () => {
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
-                  ref={el => linkRefs.current[index] = el}
+                 ref={el => {
+    linkRefs.current[index] = el;
+  }}
                   to={item.path}
                   style={{
                     padding: '0.5rem 1rem',
