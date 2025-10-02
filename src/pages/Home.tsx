@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Users, Target, Heart } from 'lucide-react'
-
+import logo from '../assets/A2logo.png'
 const Home: React.FC = () => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null)
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 50%, #1e3a8a 100%)',
+      background: 'linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #ec4899 100%)',
       color: 'white',
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
@@ -80,45 +80,9 @@ const Home: React.FC = () => {
         }}>
           {/* Team Photo with enhanced styling */}
           <div style={{
-            marginBottom: '3rem',
             position: 'relative'
           }}>
-            <div style={{
-              width: '200px',
-              height: '200px',
-              margin: '0 auto',
-              borderRadius: '50%',
-              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(14, 165, 233, 0.3))',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              position: 'relative',
-              transition: 'all 0.5s ease',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.4)'
-            }}>
-              <img
-                src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg"
-                alt="Equipo Aztech II"
-                style={{
-                  width: '180px',
-                  height: '180px',
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  border: '3px solid rgba(255, 255, 255, 0.3)'
-                }}
-              />
-              <div style={{
-                position: 'absolute',
-                inset: '0',
-                borderRadius: '50%',
-                border: '2px solid transparent',
-                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #3b82f6, #0ea5e9) border-box',
-                opacity: '0',
-                transition: 'opacity 0.3s ease'
-              }}></div>
-            </div>
+              <img src={logo} alt="" style={{ width: "80%", height: "auto" }} />
           </div>
 
           {/* Main Title with enhanced gradient */}
@@ -129,10 +93,11 @@ const Home: React.FC = () => {
             lineHeight: '1.1',
             textShadow: '0 4px 12px rgba(0, 0, 0, 0.4)',
             overflow: 'hidden',
+            marginTop: "0"
           }}>
             Somos{' '}
             <span style={{
-              background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+              background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -175,7 +140,7 @@ const Home: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '0.75rem',
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 color: 'white',
                 padding: '1rem 2.5rem',
                 borderRadius: '50px',
@@ -183,7 +148,7 @@ const Home: React.FC = () => {
                 fontSize: '1.1rem',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(59, 130, 246, 0.5)',
+                boxShadow: '0 4px 15px rgba(139, 92, 246, 0.5)',
                 border: 'none',
                 cursor: 'pointer',
                 position: 'relative',
@@ -268,7 +233,7 @@ const Home: React.FC = () => {
       {/* Team Info Section with enhanced styling */}
       <section style={{
         padding: '5rem 1rem',
-        background: 'linear-gradient(180deg, rgba(30, 58, 138, 0) 0%, rgba(30, 58, 138, 0.8) 100%)',
+        background: 'linear-gradient(180deg, rgba(139, 92, 246, 0) 0%, rgba(139, 92, 246, 0.8) 100%)',
         position: 'relative',
         zIndex: '1'
       }}>
@@ -292,7 +257,7 @@ const Home: React.FC = () => {
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 transition: 'all 0.4s ease',
                 transform: hoveredCard === 'quienes' ? 'translateY(-8px)' : 'translateY(0)',
-                boxShadow: hoveredCard === 'quienes' ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
+                boxShadow: hoveredCard === 'quienes' ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
               }}
               onMouseEnter={() => setHoveredCard('quienes')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -300,13 +265,13 @@ const Home: React.FC = () => {
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 borderRadius: '1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1.5rem',
-                boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
               }}>
                 <Users style={{ color: 'white' }} size={32} />
               </div>
@@ -337,7 +302,7 @@ const Home: React.FC = () => {
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 transition: 'all 0.4s ease',
                 transform: hoveredCard === 'mision' ? 'translateY(-8px)' : 'translateY(0)',
-                boxShadow: hoveredCard === 'mision' ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
+                boxShadow: hoveredCard === 'mision' ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
               }}
               onMouseEnter={() => setHoveredCard('mision')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -345,13 +310,13 @@ const Home: React.FC = () => {
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 borderRadius: '1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1.5rem',
-                boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
               }}>
                 <Target style={{ color: 'white' }} size={32} />
               </div>
@@ -382,7 +347,7 @@ const Home: React.FC = () => {
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 transition: 'all 0.4s ease',
                 transform: hoveredCard === 'compromiso' ? 'translateY(-8px)' : 'translateY(0)',
-                boxShadow: hoveredCard === 'compromiso' ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
+                boxShadow: hoveredCard === 'compromiso' ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.3)'
               }}
               onMouseEnter={() => setHoveredCard('compromiso')}
               onMouseLeave={() => setHoveredCard(null)}
@@ -390,13 +355,13 @@ const Home: React.FC = () => {
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 borderRadius: '1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1.5rem',
-                boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
               }}>
                 <Heart style={{ color: 'white' }} size={32} />
               </div>

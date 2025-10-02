@@ -33,7 +33,7 @@ const Impact: React.FC = () => {
       description: "Programa de robótica adaptada para niños con diferentes capacidades",
       result: "50+ niños beneficiados",
       image: "https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg",
-      icon: <Users style={{ color: '#60a5fa' }} size={24} />
+      icon: <Users style={{ color: '#a78bfa' }} size={24} />
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const Impact: React.FC = () => {
       description: "Desarrollo de sistemas automatizados para mejorar el cuidado animal",
       result: "3 refugios equipados",
       image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
-      icon: <PawPrint style={{ color: '#0ea5e9' }} size={24} />
+      icon: <PawPrint style={{ color: '#ec4899' }} size={24} />
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ const Impact: React.FC = () => {
       description: "Talleres gratuitos de robótica en comunidades vulnerables",
       result: "200+ estudiantes alcanzados",
       image: "https://images.pexels.com/photos/8197534/pexels-photo-8197534.jpeg",
-      icon: <Heart style={{ color: '#60a5fa' }} size={24} />
+      icon: <Heart style={{ color: '#a78bfa' }} size={24} />
     }
   ]
 
@@ -77,7 +77,7 @@ const Impact: React.FC = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 50%, #1e3a8a 100%)',
+      background: 'linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #ec4899 100%)',
       color: 'white',
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
@@ -134,7 +134,7 @@ const Impact: React.FC = () => {
           }}>
             Nuestro{' '}
             <span style={{
-              background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+              background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -190,7 +190,7 @@ const Impact: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredProject === project.id ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredProject === project.id ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
+                  boxShadow: hoveredProject === project.id ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
                 }}
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
@@ -247,19 +247,19 @@ const Impact: React.FC = () => {
                     justifyContent: 'space-between'
                   }}>
                     <span style={{
-                      background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                      background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                       color: 'white',
                       padding: '0.5rem 1rem',
                       borderRadius: '9999px',
                       fontSize: '0.875rem',
                       fontWeight: '600',
-                      boxShadow: '0 4px 8px rgba(59, 130, 246, 0.3)'
+                      boxShadow: '0 4px 8px rgba(139, 92, 246, 0.3)'
                     }}>
                       {project.result}
                     </span>
                     <button 
                       style={{
-                        color: '#60a5fa',
+                        color: '#a78bfa',
                         background: 'none',
                         border: 'none',
                         cursor: 'pointer',
@@ -271,7 +271,7 @@ const Impact: React.FC = () => {
                         height: '2.5rem',
                         borderRadius: '50%',
                         ...(hoveredProject === project.id ? {
-                          backgroundColor: 'rgba(96, 165, 250, 0.2)',
+                          backgroundColor: 'rgba(167, 139, 250, 0.2)',
                           transform: 'translateX(3px)'
                         } : {})
                       }}
@@ -290,7 +290,7 @@ const Impact: React.FC = () => {
           }}>
             <button 
               style={{
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 color: 'white',
                 padding: '1rem 2.5rem',
                 borderRadius: '9999px',
@@ -305,7 +305,7 @@ const Impact: React.FC = () => {
                 gap: '0.75rem',
                 ...(hoveredButton === 'gallery' ? {
                   transform: 'translateY(-3px)',
-                  boxShadow: '0 10px 20px rgba(59, 130, 246, 0.4)'
+                  boxShadow: '0 10px 20px rgba(139, 92, 246, 0.4)'
                 } : {})
               }}
               onMouseEnter={() => setHoveredButton('gallery')}
@@ -345,7 +345,7 @@ const Impact: React.FC = () => {
             }}>
               Heart of the{' '}
               <span style={{
-                background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+                background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -385,7 +385,7 @@ const Impact: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredVideo === video.id ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredVideo === video.id ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
+                  boxShadow: hoveredVideo === video.id ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
                   cursor: 'pointer'
                 }}
                 onMouseEnter={() => setHoveredVideo(video.id)}
@@ -421,7 +421,7 @@ const Impact: React.FC = () => {
                     <div style={{
                       width: '4rem',
                       height: '4rem',
-                      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                      backgroundColor: 'rgba(167, 139, 250, 0.2)',
                       backdropFilter: 'blur(4px)',
                       borderRadius: '50%',
                       display: 'flex',

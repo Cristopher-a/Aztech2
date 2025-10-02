@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
+import logo from '../assets/A2logo.png' // Asegúrate de tener un logo en esta ruta
 const Navbar: React.FC = () => {
   const location = useLocation()
   const [isHovered, setIsHovered] = useState<string | null>(null)
@@ -51,23 +51,24 @@ const Navbar: React.FC = () => {
       left: 0,
       right: 0,
       zIndex: 50,
-      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+      backgroundColor: 'rgba(45, 27, 105, 0.2)',
       backdropFilter: 'blur(10px)',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+      overflow: "hidden",
+      borderBottom: '1px solid rgba(139, 92, 246, 0.2)'
     }}>
       <div style={{
         maxWidth: '1280px',
         margin: '0 auto',
         paddingLeft: '1rem',
         paddingRight: '1rem',
-        
-    
+        overflow: "hidden",
       }}>
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          height: '4rem'
+          height: '4rem',
+          overflow: "hidden",
         }}>
           {/* Logo */}
           <Link to="/" style={{
@@ -76,22 +77,7 @@ const Navbar: React.FC = () => {
             gap: '0.75rem',
             textDecoration: 'none'
           }}>
-            <div style={{
-              width: '2.5rem',
-              height: '2.5rem',
-              background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
-              borderRadius: '0.5rem',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 8px 16px rgba(59, 130, 246, 0.3)'
-            }}>
-              <span style={{
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '1.125rem'
-              }}>A2</span>
-            </div>
+            <img src={logo} alt="" style={{ width: "8.6rem", height: "4.5rem" }} />
             <span style={{
               color: 'white',
               fontWeight: 'bold',
@@ -111,18 +97,17 @@ const Navbar: React.FC = () => {
               alignItems: 'center',
               gap: '0.5rem',
               padding: '0.25rem',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backgroundColor: 'rgba(139, 92, 246, 0.1)',
               backdropFilter: 'blur(8px)',
               borderRadius: '9999px',
               transition: 'all 0.3s ease',
-     
             }}>
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
-                 ref={el => {
-    linkRefs.current[index] = el;
-  }}
+                  ref={el => {
+                    linkRefs.current[index] = el;
+                  }}
                   to={item.path}
                   style={{
                     padding: '0.5rem 1rem',
@@ -136,9 +121,9 @@ const Navbar: React.FC = () => {
                     ...(location.pathname === item.path 
                       ? {
                           color: 'white',
-                          background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
-                          borderColor: 'rgba(255, 255, 255, 0.2)',
-                          boxShadow: '0 4px 8px rgba(59, 130, 246, 0.3)'
+                          background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
+                          borderColor: 'rgba(236, 72, 153, 0.3)',
+                          boxShadow: '0 4px 8px rgba(139, 92, 246, 0.3)'
                         } 
                       : {
                           color: 'rgba(255, 255, 255, 0.8)'
@@ -146,7 +131,7 @@ const Navbar: React.FC = () => {
                     ...(isHovered === item.name && location.pathname !== item.path 
                       ? {
                           color: 'white',
-                          backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                          backgroundColor: 'rgba(139, 92, 246, 0.2)'
                         } 
                       : {})
                   }}

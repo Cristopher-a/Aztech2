@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Instagram, Mail, Phone } from 'lucide-react'
-
+import logo from '../assets/A2logo.png'
 const Footer: React.FC = () => {
   const [hoveredSocial, setHoveredSocial] = useState<string | null>(null)
 
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer style={{
-      background: '#0f172a',
+      background: '#2d1b69',
       color: 'white',
       position: 'relative',
       overflow: 'hidden',
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
         width: '200px',
         height: '200px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0) 70%)',
+        background: 'radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0) 70%)',
         zIndex: 0
       }}></div>
       
@@ -55,22 +55,7 @@ const Footer: React.FC = () => {
               gap: '0.75rem',
               marginBottom: '1rem'
             }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
-                borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 4px 10px rgba(59, 130, 246, 0.3)'
-              }}>
-                <span style={{
-                  color: 'white',
-                  fontWeight: 'bold',
-                  fontSize: '1.25rem'
-                }}>A2</span>
-              </div>
+                 <img src={logo} alt="" style={{ width: "8.6rem", height: "4.5rem" }} />
               <span style={{
                 color: 'white',
                 fontWeight: 'bold',
@@ -106,7 +91,7 @@ const Footer: React.FC = () => {
                   textDecoration: 'none',
                   transition: 'all 0.3s ease',
                   ...(hoveredSocial === 'instagram' ? {
-                    backgroundColor: '#e1306c',
+                    backgroundColor: '#ec4899',
                     transform: 'translateY(-3px)'
                   } : {})
                 }}
@@ -116,9 +101,6 @@ const Footer: React.FC = () => {
               >
                 <Instagram size={18} />
               </a>
-             
-    
-            
             </div>
           </div>
           
@@ -141,7 +123,7 @@ const Footer: React.FC = () => {
                 left: 0,
                 width: '30px',
                 height: '2px',
-                background: 'linear-gradient(90deg, #3b82f6, #0ea5e9)'
+                background: 'linear-gradient(90deg, #8b5cf6, #ec4899)'
               }}></span>
             </h3>
             <ul style={{
@@ -151,13 +133,13 @@ const Footer: React.FC = () => {
             }}>
              
               <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
-                <Phone size={18} style={{ marginRight: '0.75rem', color: '#3b82f6' }} />
+                <Phone size={18} style={{ marginRight: '0.75rem', color: '#8b5cf6' }} />
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem' }}>
                   +52 56 2722 4553
                 </span>
               </li>
               <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
-                <Mail size={18} style={{ marginRight: '0.75rem', color: '#3b82f6' }} />
+                <Mail size={18} style={{ marginRight: '0.75rem', color: '#8b5cf6' }} />
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem' }}>
                   17626.aztech2@gmail.com
                 </span>
@@ -181,7 +163,7 @@ const Footer: React.FC = () => {
                 left: 0,
                 width: '30px',
                 height: '2px',
-                background: 'linear-gradient(90deg, #3b82f6, #0ea5e9)'
+                background: 'linear-gradient(90deg, #8b5cf6, #ec4899)'
               }}></span>
             </h3>
             <div style={{
@@ -202,7 +184,7 @@ const Footer: React.FC = () => {
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(139, 92, 246, 0.2)';
                   e.currentTarget.style.transform = 'translateY(-3px)';
                 }}
                 onMouseLeave={(e) => {

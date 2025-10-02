@@ -55,7 +55,7 @@ const Alliances: React.FC = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 50%, #1e3a8a 100%)',
+      background: 'linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #db2777 100%)',
       color: 'white',
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
@@ -113,7 +113,7 @@ const Alliances: React.FC = () => {
           }}>
             Nuestras{' '}
             <span style={{
-              background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+              background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -175,13 +175,13 @@ const Alliances: React.FC = () => {
                   <div style={{
                     width: '4rem',
                     height: '4rem',
-                    background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                    background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                     borderRadius: '0.75rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                    boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
                   }}>
                     <Handshake style={{ color: 'white' }} size={32} />
                   </div>
@@ -229,7 +229,7 @@ const Alliances: React.FC = () => {
                     <div style={{
                       fontSize: '2rem',
                       fontWeight: '700',
-                      color: '#60a5fa',
+                      color: '#a78bfa',
                       marginBottom: '0.5rem'
                     }}>6+</div>
                     <div style={{
@@ -243,7 +243,7 @@ const Alliances: React.FC = () => {
                     <div style={{
                       fontSize: '2rem',
                       fontWeight: '700',
-                      color: '#0ea5e9',
+                      color: '#ec4899',
                       marginBottom: '0.5rem'
                     }}>5</div>
                     <div style={{
@@ -257,7 +257,7 @@ const Alliances: React.FC = () => {
                     <div style={{
                       fontSize: '2rem',
                       fontWeight: '700',
-                      color: '#60a5fa',
+                      color: '#a78bfa',
                       marginBottom: '0.5rem'
                     }}>500+</div>
                     <div style={{
@@ -286,7 +286,7 @@ const Alliances: React.FC = () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  background: 'linear-gradient(to top, rgba(30, 58, 138, 0.7), transparent)',
+                  background: 'linear-gradient(to top, rgba(139, 92, 246, 0.7), transparent)',
                   borderRadius: '1rem'
                 }}></div>
               </div>
@@ -345,7 +345,7 @@ const Alliances: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredTeam === index ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredTeam === index ? '0 10px 20px rgba(59, 130, 246, 0.3)' : '0 5px 15px rgba(0, 0, 0, 0.2)'
+                  boxShadow: hoveredTeam === index ? '0 10px 20px rgba(139, 92, 246, 0.3)' : '0 5px 15px rgba(0, 0, 0, 0.2)'
                 }}
                 onMouseEnter={() => setHoveredTeam(index)}
                 onMouseLeave={() => setHoveredTeam(null)}
@@ -432,7 +432,7 @@ const Alliances: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredActivity === index ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredActivity === index ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
+                  boxShadow: hoveredActivity === index ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
                 }}
                 onMouseEnter={() => setHoveredActivity(index)}
                 onMouseLeave={() => setHoveredActivity(null)}
@@ -469,9 +469,9 @@ const Alliances: React.FC = () => {
                       justifyContent: 'center',
                       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)'
                     }}>
-                      {index === 0 && <Video style={{ color: '#60a5fa' }} size={20} />}
-                      {index === 1 && <Users style={{ color: '#0ea5e9' }} size={20} />}
-                      {index === 2 && <Globe style={{ color: '#60a5fa' }} size={20} />}
+                      {index === 0 && <Video style={{ color: '#a78bfa' }} size={20} />}
+                      {index === 1 && <Users style={{ color: '#ec4899' }} size={20} />}
+                      {index === 2 && <Globe style={{ color: '#a78bfa' }} size={20} />}
                     </div>
                   </div>
                 </div>

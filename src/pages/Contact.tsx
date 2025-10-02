@@ -58,7 +58,7 @@ email: "ssss",
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 50%, #1e3a8a 100%)',
+      background: 'linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #ec4899 100%)',
       color: 'white',
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
@@ -116,7 +116,7 @@ email: "ssss",
           }}>
             ¡Conectemos{' '}
             <span style={{
-              background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+              background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -230,8 +230,8 @@ email: "ssss",
                       transition: 'all 0.3s ease',
                       fontSize: '1rem',
                       ...(focusedField === 'name' ? {
-                        borderColor: '#60a5fa',
-                        boxShadow: '0 0 0 3px rgba(96, 165, 250, 0.2)'
+                        borderColor: '#a78bfa',
+                        boxShadow: '0 0 0 3px rgba(167, 139, 250, 0.2)'
                       } : {})
                     }}
                     onFocus={() => setFocusedField('name')}
@@ -268,8 +268,8 @@ email: "ssss",
                       transition: 'all 0.3s ease',
                       fontSize: '1rem',
                       ...(focusedField === 'email' ? {
-                        borderColor: '#60a5fa',
-                        boxShadow: '0 0 0 3px rgba(96, 165, 250, 0.2)'
+                        borderColor: '#a78bfa',
+                        boxShadow: '0 0 0 3px rgba(167, 139, 250, 0.2)'
                       } : {})
                     }}
                     onFocus={() => setFocusedField('email')}
@@ -307,8 +307,8 @@ email: "ssss",
                       fontSize: '1rem',
                       resize: 'vertical',
                       ...(focusedField === 'message' ? {
-                        borderColor: '#60a5fa',
-                        boxShadow: '0 0 0 3px rgba(96, 165, 250, 0.2)'
+                        borderColor: '#a78bfa',
+                        boxShadow: '0 0 0 3px rgba(167, 139, 250, 0.2)'
                       } : {})
                     }}
                     onFocus={() => setFocusedField('message')}
@@ -321,7 +321,7 @@ email: "ssss",
                   type="submit"
                   style={{
                     width: '100%',
-                    background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                    background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                     color: 'white',
                     padding: '1rem',
                     borderRadius: '0.75rem',
@@ -337,7 +337,7 @@ email: "ssss",
                     marginTop: '0.5rem',
                     ...(hoveredButton === 'submit' ? {
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 10px 20px rgba(59, 130, 246, 0.4)'
+                      boxShadow: '0 10px 20px rgba(139, 92, 246, 0.4)'
                     } : {})
                   }}
                   onMouseEnter={() => setHoveredButton('submit')}
@@ -382,12 +382,12 @@ email: "ssss",
                     <div style={{
                       width: '3rem',
                       height: '3rem',
-                      background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                      background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                       borderRadius: '0.75rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                      boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
                     }}>
                       <Mail style={{ color: 'white' }} size={24} />
                     </div>
@@ -406,7 +406,7 @@ email: "ssss",
                           transition: 'color 0.3s ease',
                           fontSize: '1rem',
                           ...(hoveredLink === 'email' ? {
-                            color: '#dbeafe'
+                            color: '#f5d0fe'
                           } : {})
                         }}
                         onMouseEnter={() => setHoveredLink('email')}
@@ -427,12 +427,12 @@ email: "ssss",
                     <div style={{
                       width: '3rem',
                       height: '3rem',
-                      background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                      background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                       borderRadius: '0.75rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                      boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
                     }}>
                       <MessageCircle style={{ color: 'white' }} size={24} />
                     </div>
@@ -453,7 +453,7 @@ email: "ssss",
                           transition: 'color 0.3s ease',
                           fontSize: '1rem',
                           ...(hoveredLink === 'whatsapp' ? {
-                            color: '#dbeafe'
+                            color: '#f5d0fe'
                           } : {})
                         }}
                         onMouseEnter={() => setHoveredLink('whatsapp')}
@@ -472,12 +472,12 @@ email: "ssss",
                     <div style={{
                       width: '3rem',
                       height: '3rem',
-                      background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                      background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                       borderRadius: '0.75rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      boxShadow: '0 8px 16px rgba(59, 130, 246, 0.4)'
+                      boxShadow: '0 8px 16px rgba(139, 92, 246, 0.4)'
                     }}>
                       <MapPin style={{ color: 'white' }} size={24} />
                     </div>
@@ -499,7 +499,7 @@ email: "ssss",
                 <button
                   style={{
                     width: '100%',
-                    backgroundColor: '#10b981',
+                    backgroundColor: '#8b5cf6',
                     color: 'white',
                     padding: '1rem',
                     borderRadius: '0.75rem',
@@ -514,7 +514,7 @@ email: "ssss",
                     marginTop: '1rem',
                     ...(hoveredButton === 'whatsapp' ? {
                       transform: 'translateY(-2px)',
-                      boxShadow: '0 10px 20px rgba(16, 185, 129, 0.4)'
+                      boxShadow: '0 10px 20px rgba(139, 92, 246, 0.4)'
                     } : {})
                   }}
                   onMouseEnter={() => setHoveredButton('whatsapp')}
@@ -561,7 +561,7 @@ email: "ssss",
                       borderRadius: '50%',
                       marginTop: '0.5rem',
                       flexShrink: 0,
-                      backgroundColor: '#60a5fa'
+                      backgroundColor: '#a78bfa'
                     }}></div>
                     <p style={{
                       color: 'rgba(255, 255, 255, 0.8)',
@@ -588,7 +588,7 @@ email: "ssss",
                       borderRadius: '50%',
                       marginTop: '0.5rem',
                       flexShrink: 0,
-                      backgroundColor: '#0ea5e9'
+                      backgroundColor: '#ec4899'
                     }}></div>
                     <p style={{
                       color: 'rgba(255, 255, 255, 0.8)',
@@ -615,7 +615,7 @@ email: "ssss",
                       borderRadius: '50%',
                       marginTop: '0.5rem',
                       flexShrink: 0,
-                      backgroundColor: '#60a5fa'
+                      backgroundColor: '#a78bfa'
                     }}></div>
                     <p style={{
                       color: 'rgba(255, 255, 255, 0.8)',
@@ -642,7 +642,7 @@ email: "ssss",
                       borderRadius: '50%',
                       marginTop: '0.5rem',
                       flexShrink: 0,
-                      backgroundColor: '#0ea5e9'
+                      backgroundColor: '#ec4899'
                     }}></div>
                     <p style={{
                       color: 'rgba(255, 255, 255, 0.8)',

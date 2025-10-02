@@ -31,28 +31,28 @@ const Resources: React.FC = () => {
     {
       title: "Programación Básica con Arduino",
       description: "Guía completa para comenzar con Arduino desde cero",
-      icon: <Code style={{ color: '#60a5fa' }} size={24} />,
+      icon: <Code style={{ color: '#a78bfa' }} size={24} />,
       type: "PDF",
       size: "2.5 MB"
     },
     {
       title: "Introducción al CAD",
       description: "Aprende diseño asistido por computadora para robótica",
-      icon: <Cog style={{ color: '#0ea5e9' }} size={24} />,
+      icon: <Cog style={{ color: '#ec4899' }} size={24} />,
       type: "PDF",
       size: "3.1 MB"
     },
     {
       title: "Energía Mecánica en Robótica",
       description: "Conceptos fundamentales de física aplicada",
-      icon: <Zap style={{ color: '#60a5fa' }} size={24} />,
+      icon: <Zap style={{ color: '#a78bfa' }} size={24} />,
       type: "PDF",
       size: "1.8 MB"
     },
     {
       title: "Sensores y Actuadores",
       description: "Todo sobre los componentes básicos de un robot",
-      icon: <BookOpen style={{ color: '#0ea5e9' }} size={24} />,
+      icon: <BookOpen style={{ color: '#ec4899' }} size={24} />,
       type: "PDF",
       size: "2.2 MB"
     }
@@ -121,7 +121,7 @@ const Resources: React.FC = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #0c4a6e 50%, #1e3a8a 100%)',
+      background: 'linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #ec4899 100%)',
       color: 'white',
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
@@ -178,7 +178,7 @@ const Resources: React.FC = () => {
           }}>
             Aprende con{' '}
             <span style={{
-              background: 'linear-gradient(90deg, #60a5fa, #0ea5e9, #60a5fa)',
+              background: 'linear-gradient(90deg, #a78bfa, #ec4899, #a78bfa)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -253,7 +253,7 @@ const Resources: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredGuide === index ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredGuide === index ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
+                  boxShadow: hoveredGuide === index ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)'
                 }}
                 onMouseEnter={() => setHoveredGuide(index)}
                 onMouseLeave={() => setHoveredGuide(null)}
@@ -266,13 +266,13 @@ const Resources: React.FC = () => {
                   <div style={{
                     width: '3rem',
                     height: '3rem',
-                    background: 'linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(14, 165, 233, 0.2))',
+                    background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(236, 72, 153, 0.2))',
                     borderRadius: '0.75rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 8px 16px rgba(59, 130, 246, 0.3)'
+                    boxShadow: '0 8px 16px rgba(139, 92, 246, 0.3)'
                   }}>
                     {guide.icon}
                   </div>
@@ -310,7 +310,7 @@ const Resources: React.FC = () => {
                         fontSize: '0.875rem'
                       }}>
                         <span style={{
-                          backgroundColor: 'rgba(96, 165, 250, 0.2)',
+                          backgroundColor: 'rgba(167, 139, 250, 0.2)',
                           padding: '0.25rem 0.5rem',
                           borderRadius: '0.25rem'
                         }}>{guide.type}</span>
@@ -322,7 +322,7 @@ const Resources: React.FC = () => {
                           display: 'flex',
                           alignItems: 'center',
                           gap: '0.5rem',
-                          color: '#60a5fa',
+                          color: '#a78bfa',
                           background: 'none',
                           border: 'none',
                           cursor: 'pointer',
@@ -330,7 +330,7 @@ const Resources: React.FC = () => {
                           padding: '0.5rem',
                           borderRadius: '0.5rem',
                           ...(hoveredGuide === index ? {
-                            backgroundColor: 'rgba(96, 165, 250, 0.2)',
+                            backgroundColor: 'rgba(167, 139, 250, 0.2)',
                             transform: 'translateX(3px)'
                           } : {})
                         }}
@@ -398,7 +398,7 @@ const Resources: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredVideo === index ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredVideo === index ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
+                  boxShadow: hoveredVideo === index ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
                   cursor: 'pointer'
                 }}
                 onMouseEnter={() => setHoveredVideo(index)}
@@ -434,7 +434,7 @@ const Resources: React.FC = () => {
                     <div style={{
                       width: '3rem',
                       height: '3rem',
-                      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                      backgroundColor: 'rgba(167, 139, 250, 0.2)',
                       backdropFilter: 'blur(4px)',
                       borderRadius: '50%',
                       display: 'flex',
@@ -534,7 +534,7 @@ const Resources: React.FC = () => {
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   transition: 'all 0.3s ease',
                   transform: hoveredBlog === index ? 'translateY(-5px)' : 'translateY(0)',
-                  boxShadow: hoveredBlog === index ? '0 15px 30px rgba(59, 130, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
+                  boxShadow: hoveredBlog === index ? '0 15px 30px rgba(139, 92, 246, 0.3)' : '0 10px 20px rgba(0, 0, 0, 0.2)',
                   cursor: 'pointer'
                 }}
                 onMouseEnter={() => setHoveredBlog(index)}
@@ -576,7 +576,7 @@ const Resources: React.FC = () => {
           }}>
             <button 
               style={{
-                background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)',
+                background: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
                 color: 'white',
                 padding: '1rem 2.5rem',
                 borderRadius: '9999px',
@@ -591,7 +591,7 @@ const Resources: React.FC = () => {
                 gap: '0.75rem',
                 ...(hoveredButton === 'blog' ? {
                   transform: 'translateY(-3px)',
-                  boxShadow: '0 10px 20px rgba(59, 130, 246, 0.4)'
+                  boxShadow: '0 10px 20px rgba(139, 92, 246, 0.4)'
                 } : {})
               }}
               onMouseEnter={() => setHoveredButton('blog')}

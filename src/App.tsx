@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <div style={{
-        background: `linear-gradient(to bottom right, #1e3a8a, #3b82f6, #60a5fa),
-                    radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.3) 0%, transparent 8%),
-                    radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.3) 0%, transparent 8%),
-                    radial-gradient(circle at 40% 80%, rgba(96, 165, 250, 0.2) 0%, transparent 10%),
-                    radial-gradient(circle at 60% 20%, rgba(14, 165, 233, 0.2) 0%, transparent 10%)`,
+        background: `linear-gradient(to bottom right, #4c1d95, #7e22ce, #ec4899),
+                    radial-gradient(circle at 20% 30%, rgba(167, 139, 250, 0.3) 0%, transparent 8%),
+                    radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.3) 0%, transparent 8%),
+                    radial-gradient(circle at 40% 80%, rgba(167, 139, 250, 0.2) 0%, transparent 10%),
+                    radial-gradient(circle at 60% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 10%)`,
         backgroundSize: '100% 100%, 200px 200px, 300px 300px, 250px 250px, 350px 350px',
         backgroundPosition: 'center, 0% 0%, 100% 100%, 50% 50%, 30% 70%',
         overflow: 'hidden'
